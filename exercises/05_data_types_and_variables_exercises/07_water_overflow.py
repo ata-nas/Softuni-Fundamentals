@@ -12,4 +12,3 @@ for _ in range(filling_range):
         print("Insufficient capacity!")
 
 print(total_in_tank)
-ß
