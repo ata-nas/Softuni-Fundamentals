@@ -8,13 +8,13 @@ LAST_COMMAND = "last"
 END_COMMAND = "end"
 
 
-def exchange(user_list, index):
+def exchange(user_list: list, index: int):
     if index < 0 or index > len(user_list) - 1:
         return "Invalid index"  # possible error, depends if judge wants to print in case negative num
     return user_list[index + 1:] + user_list[:index + 1]
 
 
-def max_even_odd(user_list, command):
+def max_even_odd(user_list: list, command: str):
     max_num = -maxsize
     max_num_index = 0
     if command == "even":
@@ -32,7 +32,7 @@ def max_even_odd(user_list, command):
     return max_num_index
 
 
-def min_even_odd(user_list, command):
+def min_even_odd(user_list: list, command: str):
     min_num = maxsize
     min_num_index = 0
     if command == "even":
@@ -50,7 +50,7 @@ def min_even_odd(user_list, command):
     return min_num_index
 
 
-def first_count_even_odd(user_list, count, curr_command):
+def first_count_even_odd(user_list: list, count: int, curr_command: str):
     result_list = []
     if count > len(user_list):
         return "Invalid count"
@@ -69,7 +69,7 @@ def first_count_even_odd(user_list, count, curr_command):
     return result_list
 
 
-def last_count_even_odd(user_list, count, curr_command):
+def last_count_even_odd(user_list: list, count: int, curr_command: str):
     result_list = []
     if count > len(user_list):
         return "Invalid count"
